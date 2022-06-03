@@ -1,5 +1,7 @@
 TODO: Reflect on what you learned this week and what is still unclear.
 
+Trinket link: https://trinket.io/python/fb6d573bf3 
+
 I learnt how to create, clone and fork repositories. I understood the difference between cloning and forking and its reason. By forking we essentially give ourselves permission to edit/modify files while cloning is to grab the file from the original source itself. The reason why we do that is so that we don't have an outdated version. 
 
  What I found unclear was the best way to solve problems, for example we could commit and push our changes into vscode, but we could also write a command in the terminal to do it. I found it hard to follow the test cases on vscode, and random symbols that are there but shouldn't(?) be.
