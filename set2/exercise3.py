@@ -227,14 +227,13 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    wedge_block = []
+    wedge_stairs = []
     for i in range(10):
-        wedge_block_list = [] 
+        wedge_stairs_list = [] 
         for j in range(i+1):
-            wedge_block_list.append(str(j))
-        wedge_block.append(wedge_block_list)
-    return wedge_block
-
+            wedge_stairs_list.append(str(j))
+        wedge_stairs.append(wedge_stairs_list)
+    return wedge_stairs
 
 def loops_7():
     """Make a pyramid.
@@ -257,7 +256,18 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    
+    egypt = []
+    outside = 4
+    for i in range(5):
+        egypt_list = []
+        for j in range(9):
+            if j < outside or outside >= (9 - j):
+                egypt_list.append(" ")
+            else:
+                egypt_list.append("*")
+        outside -= 1
+        egypt.append(egypt_list)
+    return egypt
 
 def little_printer(some_kind_of_list, exercise_name):
     """Help to see what's going on.
