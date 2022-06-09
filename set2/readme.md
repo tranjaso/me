@@ -11,3 +11,4 @@ Exercise2: Basically, through trial and error I was able to debug the code by co
 Exercise 3: I found these sets of exercises very challenging, especially when I was doing loops_2 and the last two questions. 
 
 Not sure how to do loops_7, will go through it soon. 
+EDIT (1:00AM) : Got through loops_7!
