@@ -2,6 +2,9 @@
 """Modify each function until the tests pass."""
 
 
+from operator import truediv
+
+
 def is_odd(a_number):
     """Return True if a_number is odd, and False if a_number is even.
 
@@ -13,8 +16,8 @@ def is_odd(a_number):
 
     So if a_number modulo two is zero, then it's even.
     """
-    return None
-
+    is_boolean = bool(a_number % 2)
+    return is_boolean
 
 def fix_it(moves=True, should_move=True):
     """Decide what to do.
@@ -31,7 +34,14 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
-    return None
+    if not moves and should_move:
+        return "WD-40"
+    elif moves and not should_move:
+        return "Duct Tape"
+    elif (moves and should_move) or (not moves and not should_move):
+        return "No Problem"
+    else:
+        return 0
 
 
 def loops_preview():
@@ -41,7 +51,7 @@ def loops_preview():
     return a list of 8 items, each one a string with exacly one 💩 in it.
     E.g.: ['💩', '💩', '💩', '💩', '💩', '💩', '💩', '💩']
     """
-    choc_list = []
+    choc_list = ['💩', '💩', '💩', '💩', '💩', '💩', '💩', '💩']
     for i in range(8):
         choc_list.append("💩")
     return choc_list
@@ -54,7 +64,10 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
+    star_list = ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
+    for i in range(10):
+        star_list.append("*")
+    return star_list
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -67,7 +80,10 @@ def loops_1c(number_of_items=5, symbol="#"):
     Remember that you're being passed arguments here. Don't hard code the number
     or the symbol, let it be whatever it wants to be.
     """
-    return None
+    symbol_list = []
+    for i in range(number_of_items):
+        symbol_list.append(symbol)
+    return symbol_list
 
 
 def loops_2():
@@ -88,7 +104,14 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+    starfield_square_list = []
+    for j in range(10):
+        starfield_list = []
+    for i in range(10):
+        starfield_list.append('*')
+        starfield_square_list.append(starfield_list)
+    return starfield_square_list
+
 
 
 def loops_3():
@@ -112,7 +135,14 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+    number_block = []
+    for i in range(10):
+        number_block_list = []
+        for j in range(10):
+            number_block_list.append(str(i))
+        number_block.append(number_block_list)
+    return number_block
+
 
 
 def loops_4():
@@ -132,7 +162,14 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    i = 0
+    rising_block_list = []
+    for j in range(10):
+        rising_block = []
+    for i in range(10):
+        rising_block.append(str(+i))
+        rising_block_list.append(rising_block)
+    return rising_block_list
 
 
 def loops_5():
@@ -162,8 +199,13 @@ def loops_5():
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
-    return None
-
+    number_block = []
+    for i in range(10):
+        block_list = []
+        for j in range(5):
+            block_list.append("(i{}, j{})".format(i, j))
+        number_block.append(block_list)
+    return number_block
 
 def loops_6():
     """Make a wedge of numbers.
@@ -185,7 +227,13 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    wedge_block = []
+    for i in range(10):
+        wedge_block_list = [] 
+        for j in range(i+1):
+            wedge_block_list.append(str(j))
+        wedge_block.append(wedge_block_list)
+    return wedge_block
 
 
 def loops_7():
@@ -209,7 +257,10 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+    j = 9
+    for i in range(9,10,2):
+        print(' '*j+1*'*')
+        j = j-1
 
 
 def little_printer(some_kind_of_list, exercise_name):
