@@ -95,7 +95,7 @@ def shout_with_a_number(a_string, a_number):
           challenge, see if you can make the test pass with at least two ways
           of doing the same job.
     """
-    the_answer = really_shout(a_string, a_number)
+    the_answer = a_string.upper()+ " " + str(a_number)
     return the_answer
 
 
@@ -140,6 +140,7 @@ if __name__ == "__main__":
     minitest(add_1, [1], 2)
     minitest(add_5, [1], 6)
     minitest(add_5, [6], 11)
+    minitest(add_5, [-5], 0)
     minitest(add_5, [-3], 2)
     minitest(add_5, [0.5], 5.5)
     minitest(adder, [-0.5, -0.5], -1)
