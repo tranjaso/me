@@ -257,11 +257,7 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    j = 9
-    for i in range(9,10,2):
-        print(' '*j+1*'*')
-        j = j-1
-
+    
 
 def little_printer(some_kind_of_list, exercise_name):
     """Help to see what's going on.
