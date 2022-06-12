@@ -3,6 +3,7 @@
 
 
 from operator import truediv
+from tkinter import N
 
 
 def is_odd(a_number):
@@ -255,20 +256,38 @@ def loops_7():
     (this is what will print when you test from inside this file)
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
-    """
+
     egypt = []
-    outside = 4
+    length = 4
     for i in range(5):
         egypt_list = []
-        for j in range(9):
-            if j < outside or outside >= (9 - j):
+        for k in range(9):
+            left = length
+            right = 9 - length
+            if k < left or k >= right:
                 egypt_list.append(" ")
             else:
                 egypt_list.append("*")
-        outside -= 1
+        length -= 1
         egypt.append(egypt_list)
     return egypt
 
+    """
+   # A different approach by taking loops_6 with extra steps, helps me understand 
+    egypt = []
+    for i in range(5): #using a range larger than 9 we see that stars are appended first in the middle -> left then middle -> right
+        egypt_list = [] 
+        for k in range(4-i): #for loop in range 4-i to print 4,3 ,2 ,1 ,0 spaces in the beginning (for each list ranging in 5)
+              egypt_list.append(" ")
+        for j in range(2*i+1):
+              egypt_list.append("*") #since we're adding two stars in each list we do 2*0+1 = 1, 2*1 + 1 = 3, 2*2 + 1 = 5 and so forth. 
+        for k in range(4-i): #we do another for loop in range 4-i to print 4, 3, 2,1, 0 spaces to the right
+            egypt_list.append(" ")
+        egypt.append(egypt_list)
+
+    print(egypt) #helps with debugging
+    return egypt 
+    
 def little_printer(some_kind_of_list, exercise_name):
     """Help to see what's going on.
 
