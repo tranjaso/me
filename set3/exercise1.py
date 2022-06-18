@@ -5,6 +5,10 @@ Modify each function until the tests pass.
 """
 
 
+from re import M
+from tkinter import N
+
+
 def loop_ranger(start, stop=None, step=1):
     """Return a list of numbers between start and stop in steps of step.
 
@@ -46,8 +50,15 @@ def stubborn_asker(low, high):
 
     Look up the docs for a function called "input"
     """
-    ask = input("Can I have a number")
-    mid = (low + high / 2) 
+    
+    while True:
+        ask = int(input("Can I have a number please "))
+        if low < ask < high:
+            print("Cool")
+            return ask
+    else:
+        print("Uh-oh")
+        
     
 
 
@@ -56,9 +67,18 @@ def not_number_rejector(message):
 
     Ask for a number, and if the response is actually NOT a number
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
-    When you do get a number, return it.
+    When you do get a number, return it
+    
     """
-    return None
+    ask = 0
+    while True:
+        try:
+            ask = int(input("Can I have a number please"))     
+            print("Cool")
+            return ask  
+        except Exception as e:
+            print("That is one of the most idiotic things I have ever seen.")
+
 
 
 def super_asker(low, high):
@@ -67,7 +87,18 @@ def super_asker(low, high):
     Combine what you learnt from stubborn_asker and not_number_rejector
     to make a function that does it all!
     """
-    return None
+    ask = 0
+    while True:
+        try:
+            ask = int(input("Can I have a number please "))
+            if low < ask < high:
+                print("Cool")
+                return ask
+            else:
+                print("Uh-oh")
+        except Exception as e:
+            print("That is one of the most idiotic things I have ever seen. ")
+
 
 
 if __name__ == "__main__":
