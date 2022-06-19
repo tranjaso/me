@@ -2,6 +2,14 @@ TODO: Reflect on what you learned this week and what is still unclear.
 wth, for the loop_ranger stop was literally stop!!! 
 7:07 PM 18/6: Continued on exercise1 and finished, saved and pushed to Github. We use a while loop for the boolean "True" so that the program will continuously ask for a number (since the boolean is set to False if not between low and high) until between the ranges.
 
+For exercise 3, there are 3 failure modes I found and know.
+
+1. When the lowerbound is equal to the upperbound, we obviously know that the number will be either the lowerbound and the upperbound. Hence, a error saying "Wow, how'd you guess that" or something should occur and the program should exit instead of letting the user continue with the guess.
+
+2. There can also be a error where the lowerbound is higher than the upperbound, so if 10 < x < 5 lets say.
+
+3. Not sure, but obviously if we enter a string instead of an input it will also produce an error.
+
 Dataset homework:
 https://openpowerlifting.gitlab.io/opl-csv/bulk-csv.html <-- Powerlifting
 Question: The purpose of people testing their limit and why they find the challenge enjoyable and satisfying.
