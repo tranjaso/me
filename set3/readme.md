@@ -7,7 +7,7 @@ For exercise 3, I can only improve on these 1 of these failure modes (cant think
 1. When the lowerbound is equal to the upperbound, we obviously know that the number will be either the lowerbound and the upperbound. Hence, a error saying "Wow, how'd you guess that" or something should occur and the program should exit instead of letting the user continue with the guess.
 
 ![Exercise 4 Diagram:](https://user-images.githubusercontent.com/106722754/174475504-e982302a-3315-4825-b37c-2621f645ee5a.png)
-com/a/TnoP2KI)
+
 
 Dataset homework:
 https://openpowerlifting.gitlab.io/opl-csv/bulk-csv.html <-- Powerlifting
